@@ -15,7 +15,7 @@ cat list_of_clusters.txt
 while read clustername; do
   echo "Deleting PKS cluster [$clustername]..."
 
-  pks delete-cluster "$clustername"
+  pks delete-cluster "$clustername" --non-interactive
 
   echo "Monitoring the deletion status for PKS cluster [$clustername]"
   in_progress_state="in progress"
